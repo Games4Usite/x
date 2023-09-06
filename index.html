@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="CSS/master.css">
+    <link rel="icon" href="./Image/logo.icon">
+    <title>سؤال وايجابة</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="menuRateBox" class="menuRateBox">
+        <div id="menuRateBoxContent">
+            <button id="menuRateBoxClose"><i class="fa-solid fa-xmark"></i></button>
+            <button id="menuRateBoxBack"><i class="fa-solid fa-angle-left"></i></button>
+            <h3 class="key"><span>01</span>حازم محمد</h3>
+            <div class="hr"></div>
+            <h3 class="key"><span>02</span>زين علام</h3>
+            <div class="hr"></div>
+        </div>
+        <button id="menuRateBoxFullClose"></button>
+    </div>
+    <div id="menuBox">
+        <div id="menuContent">
+            <button id="menuBtnClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="menuBtnArea">
+                <button class="EditeBtns" id="menuBtnRate"><i class="fa-regular fa-bookmark"></i>ترتيب
+                    المراكز</button>
+                <button class="EditeBtns" id="menuBtnSpeacker"><i class="fa-solid fa-volume-high"></i>تشغيل
+                    الصوت</button>
+                <button class="EditeBtns" id="menuBtnContact"><i class="fa-regular fa-keyboard"></i>للتواصل
+                    معي</button>
+                <form style="display:none;" id="menuForm" action="https://formcarry.com/s/k0rOYz_6VA" method="POST"
+                    enctype="multipart/form-data">
+                    <input type="text" name="Contact With Me" class="text-input" onkeyup="ContactInput()"
+                        id="ContactInputs" placeholder="محتوي الرسالة" required>
+                    <input type="submit" value="ارسال" class="submit-btn">
+                    <div id="resetForm"><i class="fa-solid fa-xmark"></i></div>
+                </form>
+            </div>
+            <h4 class="menuTitle">اخر تحديث <span id="menuTitle"></span></h4>
+        </div>
+        <button id="menuBtnFullClose"></button>
+    </div>
+    <header>
+        <img id="logo" src="./Image/img.png">
+    </header>
+    <div id="main" class="main">
+        <button id="muneBtnSmoll"><i class="fa-solid fa-bars"></i></button>
+        <h1 id="mainText" style="display: none;">! قــريباً</h1>
+        <div id="mainContent" class="btn-info">
+            <h1>لعبة سؤال وايجابة</h1>
+            <p id="question"></p>
+            <ul id="choices">
+                <li><button id="choiceA">خيار أ</button></li>
+                <li><button id="choiceB">خيار ب</button></li>
+                <li><button id="choiceC">خيار ج</button></li>
+            </ul>
+            <p id="playerRete">• اتفضل •</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <button id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div>
+            <p>فكرة وتنفيذ : حازم محمد</p>
+            <p>محتوي الأسئلة : زين علام</p>
+        </div>
+    </footer>
+    <div id="audioBox"></div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: url(https://scontent.fcai20-6.fna.fbcdn.net/v/t1.15752-9/372839030_1394326168092602_1402313196268303345_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=QLTeFy8Z-nMAX-zGN-F&_nc_ht=scontent.fcai20-6.fna&oh=03_AdSfmKCJl_8ADue0xtWIN84SFkpQ5MAl9V6JhsIpy4oufw&oe=651DF5DC);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+.main {
+    position: relative;
+    backdrop-filter: blur(19px);
+    box-shadow: 0px 0px 20px rgb(20, 20, 20) inset;
+    border: 2px solid rgb(100, 0, 255);
+    border-radius: 10px;
+    width: 95%;
+    height: 420px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+h1 {
+    color: white;
+    text-shadow: 4px -3px 0px rgb(100, 0, 255);
+    font-size: 2.2em;
+}
+
+p {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+button {
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 7px 22px;
+    cursor: pointer;
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.347) inset;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(100, 0, 255);
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    padding-bottom: 10px;
+    height: 100px;
+    box-shadow: 0px 0px 10px rgb(10, 10, 10);
+    border-bottom: 1px solid rgba(100 0 255);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px 20px;
+    box-shadow: 0px 0px 10px rgb(10, 10, 10);
+    border-top: 1px solid rgba(100 0 255);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-info {
+    width: 100%;
+}
+
+img {
+    height: 100%;
+}
+
+#menuBtn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 1.8em;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px black inset;
+    transition: 0.2s;
+}
+
+#menuBtn.open {
+    transform: rotate(90deg);
+}
+
+#menuBox {
+    display: none;
+    position: fixed;
+    z-index: 99999999999999999999999899999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#menuContent {
+    display: flex;
+    position: relative;
+    box-shadow: 0px 0px 20px rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 95%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBtnArea {
+    width: 100%;
+}
+
+#menuBtnClose {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    padding-top: 2px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: 2px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px black inset;
+}
+
+#menuBtnFullClose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.EditeBtns {
+    width: 90%;
+    margin: 15px auto;
+    height: 60px;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 1.3em;
+    border: 2px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px black;
+}
+
+.EditeBtns i {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+#menuForm {
+    width: 90%;
+    margin: 0 auto;
+    transition: 0.5s;
+    justify-content: center;
+    position: relative;
+}
+
+#menuForm .text-input {
+    width: 100%;
+    margin: 0px auto;
+    height: 55px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    border: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-weight: 800;
+    direction: rtl;
+    caret-color: white;
+    box-shadow: 0px 0px 10px black;
+}
+
+#menuForm .submit-btn {
+    margin-left: 10px;
+    height: 55px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 800;
+    box-shadow: 0px 0px 10px black;
+}
+
+::placeholder {
+    color: white;
+}
+
+.menuRateBox {
+    display: none;
+    position: fixed;
+    z-index: 99999999999999999999999899999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#menuRateBoxClose {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    padding-top: 2px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: 2px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px black inset;
+}
+
+#menuRateBoxFullClose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.key {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.key span {
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-right: 10px;
+    font-size: 1.3em;
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+#menuRateBoxContent {
+    position: relative;
+    box-shadow: 0px 0px 20px rgb(20, 20, 20);
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 95%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 400px;
+    padding: 70px 0;
+}
+
+.hr {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.menuTitle {
+    position: absolute;
+    color: white;
+    bottom: 1px;
+    word-spacing: 3px;
+}
+
+#menuRateBoxBack {
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 1.4em;
+    border: 2px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px black inset;
+}
+
+#muneBtnSmoll {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    padding-top: 3px;
+    font-size: 1.8em;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px black inset;
+    transition: 0.2s;
+    position: fixed;
+    border: none;
+    z-index: 99999;
+    border-top: 2px solid rgba(100 0 255);
+    border-right: 2px solid rgba(100 0 255);
+    border-radius: 0px 10px 0px 10px;
+    left: -5px;
+    bottom: -5px;
+    display: none;
+}
+
+.muneBtnSmollOpen {
+    transform: rotate(90deg);
+}
+
+#resetForm {
+    transition: 0.2s;
+    z-index: 99999;
+    background-color: rgba(0 0 0 / 0%);
+    border: 1px solid rgba(0 0 0 / 0%);
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    border-radius: 50%;
+    box-shadow: none;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+@media (max-height:620px) {
+    header {
+        display: none;
+    }
+
+    #muneBtnSmoll {
+        display: flex;
+    }
+
+    .footer {
+        display: none;
+    }
+}
